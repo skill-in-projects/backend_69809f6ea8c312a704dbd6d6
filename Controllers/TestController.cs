@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Backend.Models;
 using Npgsql;
 
-namesspace Backend.Controllers;
+namespace Backend.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -14,7 +14,7 @@ public class TestController : ControllerBase
     {
         var rawConnectionString = configuration.GetConnectionString("DefaultConnection") 
             ?? Environment.GetEnvironmentVariable("DATABASE_URL") 
-            ?? throw new InvalidOperationException("Database connection string not found");
+            ?? throw new InvalidOperationException("Database connection string not found!");
         
         // Convert PostgreSQL URL to Npgsql connection string format if needed
         _connectionString = ConvertPostgresUrlToConnectionString(rawConnectionString);
