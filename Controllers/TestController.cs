@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Backend.Models;
 using Npgsql;
 
-namespace Backend.Controllers;
+namesspace Backend.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
